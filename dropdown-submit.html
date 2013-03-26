@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>degrading form select</title>
+    </head>
+    <body>
+        <form>
+            <select name="quality">
+                <option>fidelity</option>
+                <option>generosity</option>
+                <option>availability</option>
+            </select>
+            <input type="submit" value="Go"/>
+        </form>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var submit = $('input[type="submit"]');
+                submit.hide();
+                $('select[name="quality"]').change(function(){
+                    submit.click();
+                });
+            });
+        </script>
+    </body>
+</html>
+
